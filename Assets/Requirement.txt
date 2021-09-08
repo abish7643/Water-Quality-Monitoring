@@ -1,0 +1,6 @@
+Flow Meter 6
+Pressure 2
+Temp 1 (DS18B20)
+TDS 3
+Water Level 1
+Turbidity 1
