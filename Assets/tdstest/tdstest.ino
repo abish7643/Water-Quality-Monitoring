@@ -1,6 +1,6 @@
 #include <SoftwareSerial.h>
 
-SoftwareSerial mySerial(10, 11); // RX, TX
+SoftwareSerial mySerial(4, 5); // RX, TX
 bool x = 1;
 int led = 13;
 void setup()
@@ -14,7 +14,6 @@ void setup()
 
 void loop() // run over and over
 {
-  if (x == 1) { //run the loop once
     digitalWrite(13, 1); //LED for debug
     byte message[] = {0xAA, 0x05, 0x02, 0x4F, 0x55};
     mySerial.write(message, sizeof(message));
@@ -42,6 +41,5 @@ void loop() // run over and over
     digitalWrite(13, 0);
     Serial.println();
     digitalWrite(led, LOW);
-    x = 0;
-  }
+  delay(1000);
 }
